@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Обробник POST-запиту з фронтенду
 app.post('/send-email', (req, res) => {
-    console.log(req.body)
+    console.log(req.payload)
     const { name, email, message } = req.body;
 
     // Налаштування транспортера для надсилання електронної пошти
