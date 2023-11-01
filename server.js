@@ -12,6 +12,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.json());
+
 // Обробник POST-запиту з фронтенду
 app.post('/send-email', (req, res) => {
     console.log(req)
