@@ -16,15 +16,15 @@ app.post('/send-email', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.email,
-            pass: process.env.password
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD
         }
     });
 
     // Налаштовуємо лист для надсилання
     const mailOptions = {
         from: email,
-        to: process.env.email,
+        to: process.env.EMAIL,
         subject: 'Нове повідомлення з форми',
         text: `Ім'я: ${name} Email: ${email} Повідомлення: ${message}`
     };
